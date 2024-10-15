@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    transition: all 0.3s;
+    font-family: 'Rubik', sans-serif;
+}
+
+.logo {
+    cursor: pointer;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.navbar a {
+    transition: .5s;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+}
+
+.hero-left {
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.hero-right {
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+}
+
+.hero-bottom {
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+}
+
+.about-top {
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+}
+
+.about-img {
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+}
+
+.about-right {
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.service-heading {
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+}
+
+.service-container {
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.input-right {
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+}
+
+.input-left {
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.submit-button {
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+}
+
+.submit-button:hover {
+    scale: 95%;
+}
+
+#contact h1 {
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+}
+
+#projects h1 {
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+}
+
+.project-container {
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+}
+
+#skills h1 {
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+}
+
+.skills-container {
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}

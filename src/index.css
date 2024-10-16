@@ -7,9 +7,12 @@
     margin: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     overflow-x: hidden;
-    scroll-behavior: smooth;
     transition: all 0.3s;
     font-family: 'Rubik', sans-serif;
 }

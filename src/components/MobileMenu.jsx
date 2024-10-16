@@ -3,7 +3,7 @@ import { CgMenuLeftAlt } from "react-icons/cg";
 const MobileMenu = ({ setOpen }) => {
 
     return (
-        <div className='menu-section bg-[#22282F] w-full flex flex-col gap-y-5 h-screen pl-10 pr-10 pt-5 text-white'>
+        <div className='menu-section bg-[#22282F] w-full flex flex-col gap-y-5 h-screen pl-10 pr-10 pt-5 text-white text-2xl'>
             <CgMenuLeftAlt fontSize={35} className="cursor-pointer"
                 onClick={() => setOpen(false)}
             />

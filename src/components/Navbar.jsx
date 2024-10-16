@@ -25,7 +25,7 @@ const Navbar = ({ open, setOpen }) => {
                     </div>
                 </div>
                 <div className='hidden w-full h-full max-[950px]:block relative mb-0'>
-                    <div className='absolute z-10 right-0 top-[-75px] max-w-[300px] max-[450px]:max-w-[350px] w-full pl-20'>
+                    <div className='absolute z-10 right-0 top-[-75px] max-w-[340px] max-[450px]:max-w-[360px] w-full pl-20'>
                         {
                             open && <MobileMenu setOpen={setOpen} />
                         }

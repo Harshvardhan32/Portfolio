@@ -25,21 +25,23 @@ body {
 
 .hero-bottom,
 .submit-button,
-.project-container,
-#skills h1 {
+.project-container {
     opacity: 0;
     animation: slideBottom 1s ease forwards;
 }
 
-.logo,
 .hero-left,
+#skills h1,
 .about-right,
 .service-container,
+.service-heading,
 .input-left {
     opacity: 0;
     animation: slideRight 1s ease forwards;
 }
 
+.logo,
+#projects h1,
 .hero-right,
 .about-img,
 .input-right,
@@ -53,10 +55,8 @@ body {
     scale: 95%;
 }
 
-#projects h1,
 .skills-container,
 #contact h1,
-.service-heading,
 .about-top {
     opacity: 0;
     animation: slideTop 1s ease forwards;

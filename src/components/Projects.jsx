@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
-import HTMLIcon from '../assets/skills/html-icon.png';
 import HighlightedText from './HighlightedText';
 import { FaGithub } from "react-icons/fa";
 import BrowserIcon from '../assets/browser-icon.png';
-import Password from '../assets/projects/Password Generator.png'
-import PlanWithHarsh from '../assets/projects/Plan With Harsh.png'
-import TopCourses from '../assets/projects/Top Courses.png'
 import StudyNotion from '../assets/projects/StudyNotion.png'
+import StreamPulse from '../assets/projects/StreamPulse.png'
+import TopCourses from '../assets/projects/Top Courses.png'
+import PlanWithHarsh from '../assets/projects/Plan With Harsh.png'
+import Password from '../assets/projects/Password Generator.png'
 import RandomGIF from '../assets/projects/Random Gifs.png';
 import Razorpay from '../assets/projects/RazorPay Clone.png';
 import TicTacToe from '../assets/projects/TIC TAC TOE.png';
@@ -24,6 +24,14 @@ const Projects = () => {
         },
         {
             id: '02',
+            image: StreamPulse,
+            title: 'StreamPulse',
+            tech: 'React, Tailwind CSS, Redux Toolkit, The Movie Database(TMDB) API',
+            githubLink: 'https://github.com/Harshvardhan32/StreamPulse',
+            websiteLink: '/',
+        },
+        {
+            id: '03',
             image: TopCourses,
             title: 'Top Courses',
             tech: 'HTML, CSS, Tailwind CSS, React',
@@ -31,7 +39,7 @@ const Projects = () => {
             websiteLink: 'https://alltopcourses.netlify.app/',
         },
         {
-            id: '03',
+            id: '04',
             image: PlanWithHarsh,
             title: 'Plan With Harsh',
             tech: 'HTML, CSS, Tailwind CSS, React',
@@ -39,7 +47,7 @@ const Projects = () => {
             websiteLink: 'https://planwithharsh.netlify.app/'
         },
         {
-            id: '04',
+            id: '05',
             image: Password,
             title: 'SecurePass - Your Password Generator',
             tech: 'HTML, CSS, Tailwind CSS, JavaScript',
@@ -47,7 +55,7 @@ const Projects = () => {
             websiteLink: 'https://harshvardhan32.github.io/Password-Generator/'
         },
         {
-            id: '05',
+            id: '06',
             image: RandomGIF,
             title: 'Random Gifs Generator',
             tech: 'HTML, CSS, Tailwind CSS, React',
@@ -55,7 +63,7 @@ const Projects = () => {
             websiteLink: 'https://harshvardhan32.github.io/Random-gifs/'
         },
         {
-            id: '06',
+            id: '07',
             image: Razorpay,
             title: 'Razorpay UI Clone',
             tech: 'HTML, CSS, Tailwind CSS',
@@ -63,7 +71,7 @@ const Projects = () => {
             websiteLink: '#'
         },
         {
-            id: '07',
+            id: '08',
             image: TicTacToe,
             title: 'TIC TAC TOE',
             tech: 'HTML, CSS, JavaScript',
@@ -85,9 +93,9 @@ const Projects = () => {
                                 <div className='flex justify-center items-center'>
                                     <img src={item.image} alt="" className="max-h-[320px] w-full object-cover rounded-md" />
                                 </div>
-                                <div>
+                                <div className='flex flex-col gap-1'>
                                     <h3 className="text-2xl">{item.title}</h3>
-                                    <p className="text-lg text-justify">{item.tech}</p>
+                                    <p className="text-lg text-justify"><span className='font-semibold'>Technology used:</span> {item.tech}</p>
                                 </div>
                                 <div className='w-full flex flex-row gap-4 justify-between'>
                                     <Link

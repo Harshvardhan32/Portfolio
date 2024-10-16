@@ -5,22 +5,37 @@ const Contact = () => {
 
     const name = useRef('');
     const email = useRef('');
+    const phone = useRef('');
     const subject = useRef('');
     const message = useRef('');
 
-    const handleSubmit = () => {
-        const formData = {
-            name: name.current.value,
-            email: email.current.value,
-            subject: subject.current.value,
-            message: message.current.value,
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        let userName = name.current.value;
+        let userEmail = email.current.value;
+        let userPhone = phone.current.value;
+        let userSubject = subject.current.value;
+        let userMessage = message.current.value;
+
+        try {
+            await fetch('https://v1.nocodeapi.com/harshvardhan/google_sheets/olQzUDqplrmpxTII?tabId=Contact', {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify([[userName, userEmail, userPhone, userSubject, userMessage],])
+            });
+
+        } catch (error) {
+            console.log("Error: ", error.message);
         }
 
-        console.log("Contact Details: ", formData);
-        name.current.value = "";
-        email.current.value = "";
-        subject.current.value = "";
-        message.current.value = "";
+        name.current.value = ''
+        email.current.value = ''
+        phone.current.value = ''
+        subject.current.value = ''
+        message.current.value = ''
     }
 
     return (
@@ -34,6 +49,13 @@ const Contact = () => {
                         ref={name}
                         placeholder="Enter Your Name"
                         className="input-left w-full outline-none bg-slate-800 rounded-md text-lg py-[8px] px-4"
+                    />
+                    <input
+                        required
+                        type="tel"
+                        ref={phone}
+                        placeholder="Enter Your Phone No."
+                        className="input-right w-full outline-none bg-slate-800 rounded-md text-lg py-[8px] px-4"
                     />
                     <input
                         required

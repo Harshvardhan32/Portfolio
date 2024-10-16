@@ -6,12 +6,15 @@ import Services from './components/Services'
 import Contact from './components/Contact'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
+import { useState } from 'react'
 
 function App() {
 
+    const [open, setOpen] = useState(false);
+
     return (
         <>
-            <Navbar />
+            <Navbar open={open} setOpen={setOpen} />
             <HeroSection />
             <About />
             <Skills />
@@ -20,7 +23,7 @@ function App() {
             <Contact />
             <Footer />
         </>
-    )
+    );
 }
 
-export default App
+export default App;

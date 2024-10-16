@@ -1,6 +1,7 @@
 import HighlightedText from "./HighlightedText";
 import HeroImage from '../assets/3d-hero-image1.png'
 import TypingEffect from "./TypingEffect";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
     return (
@@ -13,14 +14,14 @@ const HeroSection = () => {
                     </div>
 
                     <div className="hero-bottom flex flex-wrap gap-6 text-xl">
-                        <button
+                        <Link to="https://github.com/Harshvardhan32/Harshvardhan32/blob/main/resume.pdf" target="_blank"
                             className="py-2 px-4 border-2 text-[#0ef] border-[#0ef] rounded-md hover:text-[#22282F] hover:bg-[#0ef] hover:border-transparent transition-all duration-300">
                             Download Resume
-                        </button>
-                        <button
+                        </Link>
+                        <Link to='https://github.com/Harshvardhan32/' target="_blank"
                             className="py-2 px-4 border-2 text-[#0ef] border-[#0ef] rounded-md hover:text-[#22282F] hover:bg-[#0ef] hover:border-transparent transition-all duration-300">
                             Visit GitHub
-                        </button>
+                        </Link>
                     </div>
                 </div>
                 <div className="hero-left max-[700px]:hidden w-[45%] flex flex-row gap-8 text-xl bg-background-image">

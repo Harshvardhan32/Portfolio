@@ -7,18 +7,11 @@
     margin: 0;
 }
 
-
 body {
     overflow-x: hidden;
     scroll-behavior: smooth;
     transition: all 0.3s;
     font-family: 'Rubik', sans-serif;
-}
-
-.logo {
-    cursor: pointer;
-    opacity: 0;
-    animation: slideRight 1s ease forwards;
 }
 
 .navbar a {
@@ -27,88 +20,48 @@ body {
     animation: slideTop 1s ease forwards;
 }
 
-.hero-left {
-    opacity: 0;
-    animation: slideRight 1s ease forwards;
-}
-
-.hero-right {
-    opacity: 0;
-    animation: slideLeft 1s ease forwards;
-}
-
-.hero-bottom {
+.hero-bottom,
+.submit-button,
+.project-container,
+#skills h1 {
     opacity: 0;
     animation: slideBottom 1s ease forwards;
 }
 
-.about-top {
-    opacity: 0;
-    animation: slideTop 1s ease forwards;
-}
-
-.about-img {
-    opacity: 0;
-    animation: slideLeft 1s ease forwards;
-}
-
-.about-right {
-    opacity: 0;
-    animation: slideRight 1s ease forwards;
-}
-
-.service-heading {
-    opacity: 0;
-    animation: slideTop 1s ease forwards;
-}
-
-.service-container {
-    opacity: 0;
-    animation: slideRight 1s ease forwards;
-}
-
-.input-right {
-    opacity: 0;
-    animation: slideLeft 1s ease forwards;
-}
-
+.logo,
+.hero-left,
+.about-right,
+.service-container,
 .input-left {
     opacity: 0;
     animation: slideRight 1s ease forwards;
 }
 
-.submit-button {
+.hero-right,
+.about-img,
+.input-right,
+.social-link,
+.footer {
     opacity: 0;
-    animation: slideBottom 1s ease forwards;
+    animation: slideLeft 1s ease forwards;
 }
 
 .submit-button:hover {
     scale: 95%;
 }
 
-#contact h1 {
+#projects h1,
+.skills-container,
+#contact h1,
+.service-heading,
+.about-top {
     opacity: 0;
     animation: slideTop 1s ease forwards;
 }
 
-#projects h1 {
+.menu-section {
     opacity: 0;
-    animation: slideTop 1s ease forwards;
-}
-
-.project-container {
-    opacity: 0;
-    animation: slideBottom 1s ease forwards;
-}
-
-#skills h1 {
-    opacity: 0;
-    animation: slideBottom 1s ease forwards;
-}
-
-.skills-container {
-    opacity: 0;
-    animation: slideTop 1s ease forwards;
+    animation: slideRight .5s ease forwards;
 }
 
 @keyframes slideTop {

@@ -15,7 +15,7 @@ const About = () => {
                     </div>
                     <div className='about-right max-[700px]:w-[90%] w-[45%] flex flex-col gap-5'>
                         <h3 className='text-3xl'>Full Stack Developer!</h3>
-                        <p className='text-lg'>I am a skilled full stack web developer with over 1 years of experience in the industry. My passion lies in creating website using MERN(MongoDB, Express.js, React, Node.js) stack. I take pride in staying up-to-date with current trending technologies and leveraging my creativity to produce visually appealing and user-friendly websites.</p>
+                        <p className='text-lg'>I am a skilled full stack web developer with over 1.5 years of experience. My passion lies in creating website using MERN(MongoDB, Express.js, React, Node.js) stack. I take pride in staying up-to-date with current trending technologies and leveraging my creativity to produce visually appealing and user-friendly websites.</p>
                     </div>
                 </div>
             </div>

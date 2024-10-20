@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import HighlightedText from "./HighlightedText";
+import toast from "react-hot-toast";
 
 const Contact = () => {
 
@@ -26,9 +27,10 @@ const Contact = () => {
                 },
                 body: JSON.stringify([[userName, userEmail, userPhone, userSubject, userMessage],])
             });
-
+            toast.success("Submitted Successfully!");
         } catch (error) {
             console.log("Error: ", error.message);
+            toast.error("Something went wrong!");
         }
 
         name.current.value = ''

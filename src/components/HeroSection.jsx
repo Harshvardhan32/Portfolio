@@ -14,7 +14,7 @@ const HeroSection = () => {
                     </div>
 
                     <div className="hero-bottom flex flex-wrap gap-6 text-xl">
-                        <Link to="https://github.com/Harshvardhan32/Harshvardhan32/blob/main/resume.pdf" target="_blank"
+                        <Link to="https://github.com/Harshvardhan32/Harshvardhan32/blob/main/Harshvardhan%20Resume.pdf" target="_blank"
                             className="py-2 px-4 border-2 text-[#0ef] border-[#0ef] rounded-md hover:text-[#22282F] hover:bg-[#0ef] hover:border-transparent transition-all duration-300">
                             Download Resume
                         </Link>

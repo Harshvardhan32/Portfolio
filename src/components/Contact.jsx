@@ -43,8 +43,8 @@ const Contact = () => {
     return (
         <div className="bg-[#1B1F24] text-white py-10 pt-20 my-0" id="contact">
             <h1 className="text-5xl text-center font-bold pb-10">Contact <HighlightedText text={"Me"} /> </h1>
-            <div className="max-w-[1500px] w-11/12 mx-auto py-2 flex flex-col gap-10 justify-between items-center">
-                <form onSubmit={handleSubmit} className="w-[90%] max-w-[700px] flex flex-col gap-2">
+            <div className="max-w-[1600px] w-11/12 mx-auto py-2 flex flex-col gap-10 justify-between items-center">
+                <form onSubmit={handleSubmit} className="w-[90%] max-w-[1000px] flex flex-col gap-2">
                     <input
                         required
                         type="text"

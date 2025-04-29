@@ -1,12 +1,9 @@
+import { useState } from 'react'
+import { Route, Routes } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
-import HeroSection from './components/HeroSection'
-import About from './components/About'
-import Services from './components/Services'
-import Contact from './components/Contact'
-import Skills from './components/Skills'
-import Projects from './components/Projects'
-import { useState } from 'react'
+import Home from './pages/Home'
+import ProjectDetail from './pages/ProjectDetail'
 
 function App() {
 
@@ -15,12 +12,10 @@ function App() {
     return (
         <>
             <Navbar open={open} setOpen={setOpen} />
-            <HeroSection />
-            <About />
-            <Skills />
-            <Projects />
-            <Services />
-            <Contact />
+            <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='/project-detail/:id' element={<ProjectDetail />} />
+            </Routes>
             <Footer />
         </>
     );

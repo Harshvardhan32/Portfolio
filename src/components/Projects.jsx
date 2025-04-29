@@ -2,100 +2,27 @@ import { Link } from 'react-router-dom';
 import HighlightedText from './HighlightedText';
 import { FaGithub } from "react-icons/fa";
 import BrowserIcon from '../assets/browser-icon.png';
-import StudyNotion from '../assets/projects/StudyNotion.png'
-import StreamPulse from '../assets/projects/StreamPulse.png'
-import TopCourses from '../assets/projects/Top Courses.png'
-import PlanWithHarsh from '../assets/projects/Plan With Harsh.png'
-import Password from '../assets/projects/Password Generator.png'
-import RandomGIF from '../assets/projects/Random Gifs.png';
-import Razorpay from '../assets/projects/RazorPay Clone.png';
-import TicTacToe from '../assets/projects/TIC TAC TOE.png';
+import projectData from '../data/project-data';
 
 const Projects = () => {
 
-    const data = [
-        {
-            id: '01',
-            image: StudyNotion,
-            title: 'StudyNotion | An Edtech Platform',
-            tech: 'React, Tailwind CSS, Node.js, Express.js, MongoDB, Redux Toolkit',
-            githubLink: 'https://github.com/Harshvardhan32/StudyNotion-Front-End',
-            websiteLink: 'https://studynotion-edtech-platform.netlify.app/',
-        },
-        {
-            id: '02',
-            image: StreamPulse,
-            title: 'StreamPulse',
-            tech: 'React, Tailwind CSS, Redux Toolkit, The Movie Database(TMDB) API',
-            githubLink: 'https://github.com/Harshvardhan32/StreamPulse',
-            websiteLink: '/',
-        },
-        {
-            id: '03',
-            image: TopCourses,
-            title: 'Top Courses',
-            tech: 'HTML, CSS, Tailwind CSS, React',
-            githubLink: 'https://github.com/Harshvardhan32/Top-course',
-            websiteLink: 'https://alltopcourses.netlify.app/',
-        },
-        {
-            id: '04',
-            image: PlanWithHarsh,
-            title: 'Plan With Harsh',
-            tech: 'HTML, CSS, Tailwind CSS, React',
-            githubLink: 'https://github.com/Harshvardhan32/Plan-with-harsh',
-            websiteLink: 'https://planwithharsh.netlify.app/'
-        },
-        {
-            id: '05',
-            image: Password,
-            title: 'SecurePass - Your Password Generator',
-            tech: 'HTML, CSS, Tailwind CSS, JavaScript',
-            githubLink: 'https://github.com/Harshvardhan32/Password-Generator',
-            websiteLink: 'https://harshvardhan32.github.io/Password-Generator/'
-        },
-        {
-            id: '06',
-            image: RandomGIF,
-            title: 'Random Gifs Generator',
-            tech: 'HTML, CSS, Tailwind CSS, React',
-            githubLink: 'https://github.com/Harshvardhan32/Random-gifs',
-            websiteLink: 'https://harshvardhan32.github.io/Random-gifs/'
-        },
-        {
-            id: '07',
-            image: Razorpay,
-            title: 'Razorpay UI Clone',
-            tech: 'HTML, CSS, Tailwind CSS',
-            githubLink: 'https://github.com/Harshvardhan32/Razorpay_Clone',
-            websiteLink: '#'
-        },
-        {
-            id: '08',
-            image: TicTacToe,
-            title: 'TIC TAC TOE',
-            tech: 'HTML, CSS, JavaScript',
-            githubLink: 'https://github.com/Harshvardhan32/TIC_TAC_TOE',
-            websiteLink: 'https://harshvardhan32.github.io/TIC_TAC_TOE/'
-        },
-    ];
-
     return (
         <div className="bg-[#1B1F24] text-white py-10 pt-20" id="projects">
-            <div className="max-w-[1500px] w-11/12 mx-auto py-2 flex flex-col gap-y-20 justify-between items-center">
+            <div className="max-w-[1600px] w-11/12 mx-auto py-2 flex flex-col gap-y-20 justify-between items-center">
                 <h1 className="text-5xl text-center font-bold">
                     My <HighlightedText text={"Projects"} />
                 </h1>
                 <div className="project-container w-full flex flex-row flex-wrap justify-center gap-6">
                     {
-                        data?.map((item) => (
+                        projectData?.map((item) => (
                             <div key={item.id} className="max-w-[500px] w-[32%] min-w-[290px] flex flex-col items-start gap-y-6 border-2 border-[#0ef] rounded-2xl py-10 px-8 transition-all duration-300 hover:scale-105 hover:shadow-custom-blue">
                                 <div className='flex justify-center items-center'>
                                     <img src={item.image} alt="" className="max-h-[320px] w-full object-cover rounded-md" />
                                 </div>
                                 <div className='flex flex-col gap-1'>
                                     <h3 className="text-2xl">{item.title}</h3>
-                                    <p className="text-lg text-justify"><span className='font-semibold'>Technology used:</span> {item.tech}</p>
+                                    <p className="text-lg text-justify"><span className='font-semibold'>Technology used:</span> {item.technology.join(', ')}</p>
+                                    <Link to={`/project-detail/${item.id}`} className='underline text-blue-500 text-xl'>View more</Link>
                                 </div>
                                 <div className='w-full flex flex-row gap-4 justify-between'>
                                     <Link

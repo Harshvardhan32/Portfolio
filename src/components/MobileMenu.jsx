@@ -1,4 +1,6 @@
 import { CgMenuLeftAlt } from "react-icons/cg";
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const MobileMenu = ({ setOpen }) => {
 
@@ -8,22 +10,22 @@ const MobileMenu = ({ setOpen }) => {
                 onClick={() => setOpen(false)}
             />
             <span onClick={() => setOpen(false)}>
-                <a href='#home' className="hover:text-[#0ef] transition-all duration-200">Home</a>
+                <HashLink smooth to='/#home' className="hover:text-[#0ef] transition-all duration-200">Home</HashLink>
             </span>
             <span onClick={() => setOpen(false)}>
-                <a href='#about' className="hover:text-[#0ef] transition-all duration-200">About</a>
+                <HashLink smooth to='/#about' className="hover:text-[#0ef] transition-all duration-200">About</HashLink>
             </span>
             <span onClick={() => setOpen(false)}>
-                <a href='#skills' className="hover:text-[#0ef] transition-all duration-200">Skills</a>
+                <HashLink smooth to='/#skills' className="hover:text-[#0ef] transition-all duration-200">Skills</HashLink>
             </span>
             <span onClick={() => setOpen(false)}>
-                <a href='#projects' className="hover:text-[#0ef] transition-all duration-200">Projects</a>
+                <HashLink smooth to='/#projects' className="hover:text-[#0ef] transition-all duration-200">Projects</HashLink>
             </span>
             <span onClick={() => setOpen(false)}>
-                <a href='#services' className="hover:text-[#0ef] transition-all duration-200">Services</a>
+                <HashLink smooth to='/#services' className="hover:text-[#0ef] transition-all duration-200">Services</HashLink>
             </span>
             <span onClick={() => setOpen(false)}>
-                <a href='#contact' className="hover:text-[#0ef] transition-all duration-200">Contact Me</a>
+                <HashLink smooth to='/#contact' className="hover:text-[#0ef] transition-all duration-200">Contact Me</HashLink>
             </span>
         </div>
     );

@@ -5,7 +5,7 @@ const About = () => {
 
     return (
         <div className="bg-[#1B1F24] text-white py-10 pt-20" id='about'>
-            <div className="max-w-[1500px] w-11/12 mx-auto py-2 flex flex-col gap-y-20 justify-between items-center">
+            <div className="max-w-[1600px] w-11/12 mx-auto py-2 flex flex-col gap-y-20 justify-between items-center">
                 <div className="about-top text-5xl font-bold">
                     About <HighlightedText text={"Me"} />
                 </div>

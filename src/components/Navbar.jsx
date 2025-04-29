@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
 import MobileMenu from "./MobileMenu";
 import { CgMenuRightAlt } from "react-icons/cg";
+import { HashLink } from "react-router-hash-link";
 
 const Navbar = ({ open, setOpen }) => {
 
@@ -7,16 +9,16 @@ const Navbar = ({ open, setOpen }) => {
         <>
             <div className="w-screen z-10 fixed">
                 <div className="w-full bg-[#22282F] text-white py-3">
-                    <div className="max-w-[1500px] w-11/12 mx-auto py-2 flex flex-row gap-10 justify-between items-center">
-                        <a href="#home" className="logo cursor-pointer text-4xl font-semibold">Portfolio</a>
+                    <div className="max-w-[1600px] w-11/12 mx-auto py-2 flex flex-row gap-10 justify-between items-center">
+                        <HashLink smooth to="#home" className="logo cursor-pointer text-4xl font-semibold">Portfolio</HashLink>
                         {
                             <div className="navbar max-[950px]:hidden flex flex-row gap-8 text-2xl">
-                                <a href='#home' className="hover:text-[#0ef] transition-all duration-200">Home</a>
-                                <a href='#about' className="hover:text-[#0ef] transition-all duration-200">About</a>
-                                <a href='#skills' className="hover:text-[#0ef] transition-all duration-200">Skills</a>
-                                <a href='#projects' className="hover:text-[#0ef] transition-all duration-200">Projects</a>
-                                <a href='#services' className="hover:text-[#0ef] transition-all duration-200">Services</a>
-                                <a href='#contact' className="hover:text-[#0ef] transition-all duration-200">Contact Me</a>
+                                <HashLink smooth to='/#home' className="hover:text-[#0ef] transition-all duration-200">Home</HashLink>
+                                <HashLink smooth to='/#about' className="hover:text-[#0ef] transition-all duration-200">About</HashLink>
+                                <HashLink smooth to='/#skills' className="hover:text-[#0ef] transition-all duration-200">Skills</HashLink>
+                                <HashLink smooth to='/#projects' className="hover:text-[#0ef] transition-all duration-200">Projects</HashLink>
+                                <HashLink smooth to='/#services' className="hover:text-[#0ef] transition-all duration-200">Services</HashLink>
+                                <HashLink smooth to='/#contact' className="hover:text-[#0ef] transition-all duration-200">Contact Me</HashLink>
                             </div>
                         }
                         {

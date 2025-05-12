@@ -1,5 +1,5 @@
 import HighlightedText from "./HighlightedText";
-import HeroImage from '../assets/3d-hero-image1.png'
+import HeroImage from '../assets/Hero Image.jpg';
 import TypingEffect from "./TypingEffect";
 import { Link } from "react-router-dom";
 
@@ -24,8 +24,14 @@ const HeroSection = () => {
                         </Link>
                     </div>
                 </div>
-                <div className="hero-left max-[700px]:hidden w-[45%] flex flex-row gap-8 text-xl bg-background-image">
-                    <img src={HeroImage} alt="" className="flex rounded-full shadow-custom-blue-blur" />
+                <div className="about-img max-[700px]:w-[90%] w-[45%] flex flex-row gap-8 text-xl">
+                    <div className="relative w-full aspect-square rounded-full overflow-hidden shadow-custom-blue-blur">
+                        <img
+                            src={HeroImage}
+                            alt=""
+                            className="w-full h-full object-cover"
+                        />
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,5 +1,5 @@
 import HighlightedText from './HighlightedText';
-import AboutImage from '../assets/3d-hero-image1.png'
+import AboutImage from '../assets/Hero Image.jpg';
 
 const About = () => {
 
@@ -11,7 +11,13 @@ const About = () => {
                 </div>
                 <div className="w-full flex flex-row max-[700px]:flex-col max-[700px]:justify-center mx-auto py-2 gap-10 justify-between items-center">
                     <div className="about-img max-[700px]:w-[90%] w-[45%] flex flex-row gap-8 text-xl">
-                        <img src={AboutImage} alt="" className="flex rounded-full shadow-custom-blue-blur" />
+                        <div className="relative w-full aspect-square rounded-full overflow-hidden shadow-custom-blue-blur">
+                            <img
+                                src={AboutImage}
+                                alt=""
+                                className="w-full h-full object-cover"
+                            />
+                        </div>
                     </div>
                     <div className='about-right max-[700px]:w-[90%] w-[45%] flex flex-col gap-5'>
                         <h3 className='text-3xl'>Full Stack Developer!</h3>
